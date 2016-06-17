@@ -54,7 +54,7 @@ module.exports = function(grunt) {
     mochaTest: {
       'spec': {
         options: {
-          reporter: 'spec',
+          reporter: 'node_modules/mocha-junit-reporter',
           // tests are quite slow as thy spawn node processes
           timeout: 10000
         },
