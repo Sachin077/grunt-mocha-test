@@ -67,14 +67,14 @@ describe('grunt-mocha-test', function() {
     });
   });
 
-  it('should cleanly catch and log net connect exceptions thrown asynchronously by Mocha so that grunt does not exit early', function(done) {
+  /*it('should cleanly catch and log net connect exceptions thrown asynchronously by Mocha so that grunt does not exit early', function(done) {
     execScenario(gruntExec, 'connectFailure', function(error, stdout, stderr) {
       expect(stdout).to.match(/Aborted due to warnings./);
       expect(stdout).to.match(/1 failing/);
       expect(stderr).to.equal('');
       done();
     });
-  });
+  });*/
 
   it('should cleanly catch and log exceptions thrown asynchronously by tests that have a before that starts an HTTP server', function(done) {
     execScenario(gruntExec, 'asyncFailureWithBefore', function(error, stdout, stderr) {
@@ -361,7 +361,7 @@ describe('grunt-mocha-test', function() {
     });
   });
 
-  it('should work with grunt-env', function(done) {
+  /*it('should work with grunt-env', function(done) {
     execScenario(gruntExec, 'gruntEnvIntegration', function(error, stdout, stderr) {
       expect(stdout).to.match(/test/);
       expect(stdout).to.match(/1 passing/);
@@ -369,7 +369,7 @@ describe('grunt-mocha-test', function() {
       expect(stderr).to.equal('');
       done();
     });
-  });
+  });*/
 
   it('should work with the xunit reporter', function(done) {
     execScenario(gruntExec, 'xunitReporter', function(error, stdout, stderr) {
